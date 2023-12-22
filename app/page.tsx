@@ -92,7 +92,7 @@ export default function Home() {
           <div className="bg-gray-800 shadow-md rounded-md p-4">
             <h1 className="text-white">Chickens</h1>
 
-            <Image src="/chicken.jpg" alt="Description of the image" width={500} height={300} />
+            <Image src="/chicken.jpg" alt="Description of the image" width={300} height={300} />
             <p><b>{chickenDeathsPerYear.toLocaleString()} chickens</b> are killed per year worldwide. That means roughly <b>{Math.floor(calculateDeathsPerSecond(chickenDeathsPerYear))} deaths per second.</b></p>
 
             <p><b>{Math.floor(killedChickens)} chickens have been killed </b> since you opened this page.</p>

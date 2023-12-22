@@ -50,3 +50,10 @@ a {
 a:hover {
   color: darkblue;
 }
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
