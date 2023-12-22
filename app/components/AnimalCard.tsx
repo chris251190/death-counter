@@ -38,7 +38,7 @@ const AnimalCard: React.FC<AnimalCardProps> = ({
                 <div className="bg-gray-700 p-4 w-5/6 mx-auto">
                     <p>● <b>{deathsPerYear.toLocaleString()} animals</b> are killed per year worldwide.</p>
 
-                    <p>● That means roughly <b>{Math.floor(deathsPerSecond)} deaths per second.</b></p>
+                    <p>● That would be roughly <b>{Math.floor(deathsPerSecond)} deaths per second.</b></p>
 
                     <p>● <b className="text-red-500">{Math.floor(totalDeaths).toLocaleString()}</b> <b>were killed</b> since you opened this page.</p>
                 </div>
