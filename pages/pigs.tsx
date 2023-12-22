@@ -25,8 +25,8 @@ const Pigs: React.FC = () => {
       <Image src="/pig.jpg" alt="Description of the image" width={500} height={300} />
       <p>{pigsPerYear.toLocaleString()} Pigs are killed per year worldwide. That means roughly {Math.floor(calculatePigsPerSecond())} pig deaths per second.</p>
 
-          <p style={{ fontWeight: 'bold' }}>{Math.floor(killedPigs)} pigs have been killed since you opened this page.</p>
-        </div>
+      <p style={{ fontWeight: 'bold' }}>{Math.floor(killedPigs)} pigs have been killed since you opened this page.</p>
+    </div>
   );
 };
 
