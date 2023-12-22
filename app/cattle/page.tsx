@@ -35,7 +35,7 @@ const Cattle = () => {
 
             <p><b>{Math.floor(killedPigs)} cattle has been killed since you opened this page.</b></p>
 
-            <p><b>{killedPigsThisYear.toLocaleString()} cattle have been killed this year so far.</b></p>
+            <p><b>{killedPigsThisYear.toLocaleString()} cattle has been killed this year so far.</b></p>
 
             <p>The data used here are from: <a href="https://viva.org.uk/animals/number-animals-killed/">https://viva.org.uk/animals/number-animals-killed/</a></p>
 
