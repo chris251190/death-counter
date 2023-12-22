@@ -4,6 +4,7 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <main>
+      <h1>Animal Deaths</h1>
       <Link href="/pigs">
         <Image src="/pig.jpg" alt="Description of the image" width={500} height={300} />
       </Link>
