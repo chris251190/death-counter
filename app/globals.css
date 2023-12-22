@@ -47,13 +47,6 @@ a {
   text-decoration: underline;
 }
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 3em;
-}
-
 a:hover {
   color: darkblue;
 }
