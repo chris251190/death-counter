@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image'
+import Link from 'next/link';
 
 const Pigs: React.FC = () => {
   const pigsPerYear = 1400092105;
@@ -29,6 +30,9 @@ const Pigs: React.FC = () => {
       <p><b>{Math.floor(killedPigs)} pigs have been killed since you opened this page.</b></p>
 
       <p>The data used here are from: <a href="https://viva.org.uk/animals/number-animals-killed/">https://viva.org.uk/animals/number-animals-killed/</a></p>
+
+      <Link href="/">Go Back</Link>
+      
     </div>
   );
 };
