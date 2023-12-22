@@ -49,33 +49,39 @@ export default function Home() {
 
       <div className="flex flex-wrap ">
         <div className="sm:w-1/3 p-2 w-full">
-            Photo from <a href="https://unsplash.com/de/@bhris1017?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Christopher Carson</a> on <a href="https://unsplash.com/de/fotos/weisses-ferkel-kaut-heu-i4XLJmlYit4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-            <Image src="/pig.jpg" alt="Description of the image" width={500} height={300} />
-            <p><b>{pigDeathsPerYear.toLocaleString()} pigs</b> are killed per year worldwide. That means roughly <b>{Math.floor(calculateDeathsPerSecond(pigDeathsPerYear))} deaths per second.</b></p>
+          <h1>Pigs</h1>
 
-            <p><b>{Math.floor(killedPigs)} pigs have been killed since you opened this page.</b></p>
+          Photo from <a href="https://unsplash.com/de/@bhris1017?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Christopher Carson</a> on <a href="https://unsplash.com/de/fotos/weisses-ferkel-kaut-heu-i4XLJmlYit4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+          <Image src="/pig.jpg" alt="Description of the image" width={500} height={300} />
+          <p><b>{pigDeathsPerYear.toLocaleString()} pigs</b> are killed per year worldwide. That means roughly <b>{Math.floor(calculateDeathsPerSecond(pigDeathsPerYear))} deaths per second.</b></p>
 
-            <p><b>{killedPigsThisYear.toLocaleString()} pigs have been killed this year so far.</b></p>
+          <p><b>{Math.floor(killedPigs)} pigs have been killed since you opened this page.</b></p>
+
+          <p><b>{killedPigsThisYear.toLocaleString()} pigs have been killed this year so far.</b></p>
         </div>
 
         <div className="sm:w-1/3 p-2 w-full">
-            Photo from <a href="https://unsplash.com/de/@dave_george?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">David George</a> on <a href="https://unsplash.com/de/fotos/braune-kuh-auf-grunem-grasfeld-tagsuber-o41CI8825qU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-            <Image src="/cattle.jpg" alt="Description of the image" width={500} height={300} />
-            <p><b>{cattleDeathsPerYear.toLocaleString()} cattle</b> is killed per year worldwide. That means roughly <b>{Math.floor(calculateDeathsPerSecond(cattleDeathsPerYear))} deaths per second.</b></p>
+          <h1>Cattle</h1>
 
-            <p><b>{Math.floor(killedCattle)} cattle has been killed since you opened this page.</b></p>
+          Photo from <a href="https://unsplash.com/de/@dave_george?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">David George</a> on <a href="https://unsplash.com/de/fotos/braune-kuh-auf-grunem-grasfeld-tagsuber-o41CI8825qU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+          <Image src="/cattle.jpg" alt="Description of the image" width={500} height={300} />
+          <p><b>{cattleDeathsPerYear.toLocaleString()} cattle</b> is killed per year worldwide. That means roughly <b>{Math.floor(calculateDeathsPerSecond(cattleDeathsPerYear))} deaths per second.</b></p>
 
-            <p><b>{killedCattleThisYear.toLocaleString()} cattle has been killed this year so far.</b></p>
+          <p><b>{Math.floor(killedCattle)} cattle has been killed since you opened this page.</b></p>
+
+          <p><b>{killedCattleThisYear.toLocaleString()} cattle has been killed this year so far.</b></p>
         </div>
 
         <div className="sm:w-1/3 p-2 w-full">
-            Photo from <a href="https://unsplash.com/de/@cobybriant?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Brian David</a> on <a href="https://unsplash.com/de/fotos/weisse-ente-mit-entenkuken-auf-braunem-nest-gi4p27XKVY8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-            <Image src="/chicken.jpg" alt="Description of the image" width={500} height={300} />
-            <p><b>{chickenDeathsPerYear.toLocaleString()} chickens</b> are killed per year worldwide. That means roughly <b>{Math.floor(calculateDeathsPerSecond(chickenDeathsPerYear))} deaths per second.</b></p>
+          <h1>Chickens</h1>
 
-            <p><b>{Math.floor(killedChickens)} chickens have been killed since you opened this page.</b></p>
+          Photo from <a href="https://unsplash.com/de/@cobybriant?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Brian David</a> on <a href="https://unsplash.com/de/fotos/weisse-ente-mit-entenkuken-auf-braunem-nest-gi4p27XKVY8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+          <Image src="/chicken.jpg" alt="Description of the image" width={500} height={300} />
+          <p><b>{chickenDeathsPerYear.toLocaleString()} chickens</b> are killed per year worldwide. That means roughly <b>{Math.floor(calculateDeathsPerSecond(chickenDeathsPerYear))} deaths per second.</b></p>
 
-            <p><b>{killedChickensThisYear.toLocaleString()} chickens have been killed this year so far.</b></p>
+          <p><b>{Math.floor(killedChickens)} chickens have been killed since you opened this page.</b></p>
+
+          <p><b>{killedChickensThisYear.toLocaleString()} chickens have been killed this year so far.</b></p>
         </div>
       </div>
 
