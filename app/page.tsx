@@ -1,12 +1,13 @@
 "use client"
 import Image from 'next/image'
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
   const cattleDeathsPerYear = 331952042;
   const chickenDeathsPerYear = 73791052000;
   const pigDeathsPerYear = 1400092105;
-
+  const fishDeathsPerYear = 2300000000000;
 
   const secondsPerYear = 60 * 60 * 24 * 365;
 
@@ -24,6 +25,9 @@ export default function Home() {
   const [killedPigs, setKilledPigs] = useState(0);
   const [killedPigsThisYear, setKilledPigsThisYear] = useState(0);
 
+  const [killedFish, setKilledFish] = useState(0);
+  const [killedFishThisYear, setKilledFishThisYear] = useState(0);
+
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();
@@ -38,6 +42,9 @@ export default function Home() {
 
       setKilledPigsThisYear(Math.floor(calculateDeathsPerSecond(pigDeathsPerYear) * secondsSoFar));
       setKilledPigs((prevKilledPigs) => prevKilledPigs + calculateDeathsPerSecond(pigDeathsPerYear));
+
+      setKilledFishThisYear(Math.floor(calculateDeathsPerSecond(fishDeathsPerYear) * secondsSoFar));
+      setKilledFish((prevKilledPigs) => prevKilledPigs + calculateDeathsPerSecond(fishDeathsPerYear));
     }, 1000);
 
     return () => clearInterval(interval);
@@ -96,6 +103,25 @@ export default function Home() {
 
           </div>
         </div>
+
+        <div className="sm:w-1/3 p-2 w-full">
+          <div className="bg-gray-800 shadow-md rounded-md p-4">
+            <h1 className="text-white">Wild Fish</h1>
+
+            <Image src="/fish.jpg" alt="Description of the image" width={500} height={300} />
+            <p><b>790 billion - 2.3 trillion wild fish</b> is killed per year worldwide. That means roughly <b>{Math.floor(calculateDeathsPerSecond(fishDeathsPerYear))} deaths per second.</b></p>
+
+            <p><b>{Math.floor(killedFish)} wild fish has been killed </b> since you opened this page.</p>
+
+            <p><b className="text-red-500">{killedFishThisYear.toLocaleString()} wild fish has been killed</b> this year so far.</p>
+
+            Photo by <a href="https://unsplash.com/de/@ragojogen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Julieann Ragojo</a> on <a href="https://unsplash.com/de/fotos/flacher-fokus-von-orangefarbenen-fischen-I0u6-10ga0I?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
+          </div>
+        </div>
+
+        <p className='sm:w-3/3 p-2 w-full'>All data is coming from: <Link href={"https://viva.org.uk/animals/number-animals-killed/"}>https://viva.org.uk/animals/number-animals-killed/</Link></p>
+    
       </div>
 
     </main>
