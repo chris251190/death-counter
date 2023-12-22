@@ -1,8 +1,6 @@
 "use client"
-import Image from 'next/image'
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import AnimalCardComponent from './components/AnimalCard';
 import AnimalCard from './components/AnimalCard';
 
 export default function Home() {
@@ -68,7 +66,7 @@ export default function Home() {
 
   return (
     <main>
-      <h1>Animal Deaths</h1>
+      <h1>Animal Death Counter</h1>
 
       <div className="flex flex-wrap ">
 
