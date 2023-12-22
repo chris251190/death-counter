@@ -71,7 +71,7 @@ export default function Home() {
         <div className="w-1/3 p-2">
             Photo from <a href="https://unsplash.com/de/@cobybriant?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Brian David</a> on <a href="https://unsplash.com/de/fotos/weisse-ente-mit-entenkuken-auf-braunem-nest-gi4p27XKVY8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
             <Image src="/chicken.jpg" alt="Description of the image" width={500} height={300} />
-            <p><b>{chickenDeathsPerYear.toLocaleString()} cattle</b> are killed per year worldwide. That means roughly <b>{Math.floor(calculateDeathsPerSecond(chickenDeathsPerYear))} deaths per second.</b></p>
+            <p><b>{chickenDeathsPerYear.toLocaleString()} chickens</b> are killed per year worldwide. That means roughly <b>{Math.floor(calculateDeathsPerSecond(chickenDeathsPerYear))} deaths per second.</b></p>
 
             <p><b>{Math.floor(killedChickens)} chickens have been killed since you opened this page.</b></p>
 
