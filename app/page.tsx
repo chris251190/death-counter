@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 export default function Home() {
   const cattleDeathsPerYear = 331952042;
   const chickenDeathsPerYear = 73791052000;
+  const pigDeathsPerYear = 1400092105;
+
 
   const secondsPerYear = 60 * 60 * 24 * 365;
 
@@ -15,9 +17,12 @@ export default function Home() {
   const [killedCattle, setKilledCattle] = useState(0);
   const [killedCattleThisYear, setKilledCattleThisYear] = useState(0);
 
-  
+
   const [killedChickensThisYear, setKilledChickensThisYear] = useState(0);
   const [killedChickens, setKilledChickens] = useState(0);
+
+  const [killedPigs, setKilledPigs] = useState(0);
+  const [killedPigsThisYear, setKilledPigsThisYear] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -30,6 +35,9 @@ export default function Home() {
 
       setKilledChickensThisYear(Math.floor(calculateDeathsPerSecond(chickenDeathsPerYear) * secondsSoFar));
       setKilledChickens((prevKilledChickens) => prevKilledChickens + calculateDeathsPerSecond(chickenDeathsPerYear));
+
+      setKilledPigsThisYear(Math.floor(calculateDeathsPerSecond(pigDeathsPerYear) * secondsSoFar));
+      setKilledPigs((prevKilledPigs) => prevKilledPigs + calculateDeathsPerSecond(pigDeathsPerYear));
     }, 1000);
 
     return () => clearInterval(interval);
@@ -44,6 +52,11 @@ export default function Home() {
           <div>
             Photo from <a href="https://unsplash.com/de/@bhris1017?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Christopher Carson</a> on <a href="https://unsplash.com/de/fotos/weisses-ferkel-kaut-heu-i4XLJmlYit4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
             <Image src="/pig.jpg" alt="Description of the image" width={500} height={300} />
+            <p><b>{pigDeathsPerYear.toLocaleString()} pigs</b> are killed per year worldwide. That means roughly <b>{Math.floor(calculateDeathsPerSecond(pigDeathsPerYear))} deaths per second.</b></p>
+
+            <p><b>{Math.floor(killedPigs)} pigs have been killed since you opened this page.</b></p>
+
+            <p><b>{killedPigsThisYear.toLocaleString()} pigs have been killed this year so far.</b></p>
           </div>
         </div>
 
@@ -65,9 +78,9 @@ export default function Home() {
             <Image src="/chicken.jpg" alt="Description of the image" width={500} height={300} />
             <p><b>{chickenDeathsPerYear.toLocaleString()} cattle</b> are killed per year worldwide. That means roughly <b>{Math.floor(calculateDeathsPerSecond(chickenDeathsPerYear))} deaths per second.</b></p>
 
-            <p><b>{Math.floor(killedChickens)} cattle has been killed since you opened this page.</b></p>
+            <p><b>{Math.floor(killedChickens)} chickens have been killed since you opened this page.</b></p>
 
-            <p><b>{killedChickensThisYear.toLocaleString()} cattle has been killed this year so far.</b></p>
+            <p><b>{killedChickensThisYear.toLocaleString()} cattle have been killed this year so far.</b></p>
           </div>
         </div>
       </div>
