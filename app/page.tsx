@@ -75,7 +75,7 @@ export default function Home() {
 
             <p><b>{Math.floor(killedChickens)} chickens have been killed since you opened this page.</b></p>
 
-            <p><b>{killedChickensThisYear.toLocaleString()} cattle have been killed this year so far.</b></p>
+            <p><b>{killedChickensThisYear.toLocaleString()} chickens have been killed this year so far.</b></p>
         </div>
       </div>
 
