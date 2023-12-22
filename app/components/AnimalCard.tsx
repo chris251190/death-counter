@@ -28,7 +28,7 @@ const AnimalCard: React.FC<AnimalCardProps> = ({
     totalDeaths,
 }) => {
     return (
-        <div className="sm:w-1/3 p-2 w-full">
+        <div className="sm:w-1/3 p-2 w-full mx-auto sm:mx-0">
             <div className="bg-gray-800 shadow-md rounded-md p-4">
                 <h2 className="text-white">{title}</h2>
 
