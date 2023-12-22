@@ -52,7 +52,7 @@ export default function Home() {
           <h1>Pigs</h1>
 
           Photo from <a href="https://unsplash.com/de/@bhris1017?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Christopher Carson</a> on <a href="https://unsplash.com/de/fotos/weisses-ferkel-kaut-heu-i4XLJmlYit4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-          <Image src="/pig.jpg" alt="Description of the image" width={500} height={300} />
+          <Image className="object-contain h-48 w-96" src="/pig.jpg" alt="Description of the image" width={500} height={300} />
           <p><b>{pigDeathsPerYear.toLocaleString()} pigs</b> are killed per year worldwide. That means roughly <b>{Math.floor(calculateDeathsPerSecond(pigDeathsPerYear))} deaths per second.</b></p>
 
           <p><b>{Math.floor(killedPigs)} pigs have been killed</b> since you opened this page.</p>
@@ -64,7 +64,7 @@ export default function Home() {
           <h1>Cattle</h1>
 
           Photo from <a href="https://unsplash.com/de/@dave_george?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">David George</a> on <a href="https://unsplash.com/de/fotos/braune-kuh-auf-grunem-grasfeld-tagsuber-o41CI8825qU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-          <Image src="/cattle.jpg" alt="Description of the image" width={500} height={300} />
+          <Image className="object-contain h-48 w-96" src="/cattle.jpg" alt="Description of the image" width={500} height={300} />
           <p><b>{cattleDeathsPerYear.toLocaleString()} cattle</b> is killed per year worldwide. That means roughly <b>{Math.floor(calculateDeathsPerSecond(cattleDeathsPerYear))} deaths per second.</b></p>
 
           <p><b>{Math.floor(killedCattle)} cattle has been killed</b> since you opened this page.</p>
@@ -76,7 +76,7 @@ export default function Home() {
           <h1>Chickens</h1>
 
           Photo from <a href="https://unsplash.com/de/@cobybriant?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Brian David</a> on <a href="https://unsplash.com/de/fotos/weisse-ente-mit-entenkuken-auf-braunem-nest-gi4p27XKVY8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-          <Image src="/chicken.jpg" alt="Description of the image" width={500} height={300} />
+          <Image className="object-contain h-48 w-96" src="/chicken.jpg" alt="Description of the image" width={500} height={300} />
           <p><b>{chickenDeathsPerYear.toLocaleString()} chickens</b> are killed per year worldwide. That means roughly <b>{Math.floor(calculateDeathsPerSecond(chickenDeathsPerYear))} deaths per second.</b></p>
 
           <p><b>{Math.floor(killedChickens)} chickens have been killed </b> since you opened this page.</p>
