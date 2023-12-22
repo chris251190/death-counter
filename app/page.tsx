@@ -20,6 +20,14 @@ export default function Home() {
       </Link>
   
       </div>
+
+      <div>
+      Photo from <a href="https://unsplash.com/de/@cobybriant?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Brian David</a> on <a href="https://unsplash.com/de/fotos/weisse-ente-mit-entenkuken-auf-braunem-nest-gi4p27XKVY8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        <Link href="/chicken">
+        <Image src="/chicken.jpg" alt="Description of the image" width={500} height={300} />
+      </Link>
+  
+      </div>
      
     </main>
   )
