@@ -38,8 +38,17 @@ h1 {
   margin-bottom: 20px;
 }
 
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
 p {
   margin-bottom: 1em;
+  margin-left: 10%;
 }
 
 a {

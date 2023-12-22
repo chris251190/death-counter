@@ -57,15 +57,17 @@ export default function Home() {
       <div className="flex flex-wrap ">
         <div className="sm:w-1/3 p-2 w-full">
           <div className="bg-gray-800 shadow-md rounded-md p-4">
-            <h1 className="text-white">Pigs</h1>
+            <h2 className="text-white">Pigs</h2>
 
             <Image src="/pig.jpg" alt="Description of the image" width={500} height={300} />
 
-            <p><b>{pigDeathsPerYear.toLocaleString()} pigs</b> are killed per year worldwide. That means roughly <b>{Math.floor(calculateDeathsPerSecond(pigDeathsPerYear))} deaths per second.</b></p>
+            <p>● <b>{pigDeathsPerYear.toLocaleString()} pigs</b> are killed per year worldwide.</p> 
+            
+            <p>● That means roughly <b>{Math.floor(calculateDeathsPerSecond(pigDeathsPerYear))} deaths per second.</b></p>
 
-            <p><b>{Math.floor(killedPigs)} pigs have been killed</b> since you opened this page.</p>
+            <p>● <b>{Math.floor(killedPigs).toLocaleString()} pigs have been killed</b> since you opened this page.</p>
 
-            <p><b className="text-red-500">{killedPigsThisYear.toLocaleString()} pigs have been killed</b> this year so far.</p>
+            <p>● <b className="text-red-500">{killedPigsThisYear.toLocaleString()} pigs have been killed</b> this year so far.</p>
 
             Photo by <a href="https://unsplash.com/de/@bhris1017?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Christopher Carson</a> on <a href="https://unsplash.com/de/fotos/weisses-ferkel-kaut-heu-i4XLJmlYit4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
@@ -74,14 +76,16 @@ export default function Home() {
 
         <div className="sm:w-1/3 p-2 w-full">
           <div className="bg-gray-800 shadow-md rounded-md p-4">
-            <h1 className="text-white">Cattle</h1>
+            <h2 className="text-white">Cattle</h2>
 
             <Image src="/cattle.jpg" alt="Description of the image" width={500} height={300} />
-            <p><b>{cattleDeathsPerYear.toLocaleString()} cattle</b> is killed per year worldwide. That means roughly <b>{Math.floor(calculateDeathsPerSecond(cattleDeathsPerYear))} deaths per second.</b></p>
+            <p>● <b>{cattleDeathsPerYear.toLocaleString()} cattle</b> is killed per year worldwide.</p>
+            
+            <p>● That means roughly <b>{Math.floor(calculateDeathsPerSecond(cattleDeathsPerYear))} deaths per second.</b></p>
 
-            <p><b>{Math.floor(killedCattle)} cattle has been killed</b> since you opened this page.</p>
+            <p>● <b>{Math.floor(killedCattle).toLocaleString()} cattle has been killed</b> since you opened this page.</p>
 
-            <p><b className="text-red-500">{killedCattleThisYear.toLocaleString()} cattle has been killed</b> this year so far.</p>
+            <p>● <b className="text-red-500">{killedCattleThisYear.toLocaleString()} cattle has been killed</b> this year so far.</p>
 
             Photo by <a href="https://unsplash.com/de/@dave_george?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">David George</a> on <a href="https://unsplash.com/de/fotos/braune-kuh-auf-grunem-grasfeld-tagsuber-o41CI8825qU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
@@ -90,14 +94,16 @@ export default function Home() {
 
         <div className="sm:w-1/3 p-2 w-full">
           <div className="bg-gray-800 shadow-md rounded-md p-4">
-            <h1 className="text-white">Chickens</h1>
+            <h2 className="text-white">Chickens</h2>
 
             <Image src="/chicken.jpg" alt="Description of the image" width={300} height={300} />
-            <p><b>{chickenDeathsPerYear.toLocaleString()} chickens</b> are killed per year worldwide. That means roughly <b>{Math.floor(calculateDeathsPerSecond(chickenDeathsPerYear))} deaths per second.</b></p>
+            <p>● <b>{chickenDeathsPerYear.toLocaleString()} chickens</b> are killed per year worldwide.</p> 
+            
+            <p>● That means roughly <b>{Math.floor(calculateDeathsPerSecond(chickenDeathsPerYear))} deaths per second.</b></p>
 
-            <p><b>{Math.floor(killedChickens)} chickens have been killed </b> since you opened this page.</p>
+            <p>● <b>{Math.floor(killedChickens).toLocaleString()} chickens have been killed </b> since you opened this page.</p>
 
-            <p><b className="text-red-500">{killedChickensThisYear.toLocaleString()} chickens have been killed</b> this year so far.</p>
+            <p>● <b className="text-red-500">{killedChickensThisYear.toLocaleString()} chickens have been killed</b> this year so far.</p>
 
             Photo by <a href="https://unsplash.com/de/@cobybriant?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Brian David</a> on <a href="https://unsplash.com/de/fotos/weisse-ente-mit-entenkuken-auf-braunem-nest-gi4p27XKVY8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
@@ -106,14 +112,16 @@ export default function Home() {
 
         <div className="sm:w-1/3 p-2 w-full">
           <div className="bg-gray-800 shadow-md rounded-md p-4">
-            <h1 className="text-white">Wild Fish</h1>
+            <h2 className="text-white">Wild Fish</h2>
 
             <Image src="/fish.jpg" alt="Description of the image" width={500} height={300} />
-            <p><b>790 billion - 2.3 trillion wild fish</b> is killed per year worldwide. That means roughly <b>{Math.floor(calculateDeathsPerSecond(fishDeathsPerYear))} deaths per second.</b></p>
+            <p>● <b>790 billion - 2.3 trillion wild fish</b> is killed per year worldwide.</p> 
+            
+            <p>● That means roughly <b>{Math.floor(calculateDeathsPerSecond(fishDeathsPerYear))} deaths per second.</b></p>
 
-            <p><b>{Math.floor(killedFish)} wild fish has been killed </b> since you opened this page.</p>
+            <p>● <b>{Math.floor(killedFish).toLocaleString()} wild fish has been killed </b> since you opened this page.</p>
 
-            <p><b className="text-red-500">{killedFishThisYear.toLocaleString()} wild fish has been killed</b> this year so far.</p>
+            <p>● <b className="text-red-500">{killedFishThisYear.toLocaleString()} wild fish has been killed</b> this year so far.</p>
 
             Photo by <a href="https://unsplash.com/de/@ragojogen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Julieann Ragojo</a> on <a href="https://unsplash.com/de/fotos/flacher-fokus-von-orangefarbenen-fischen-I0u6-10ga0I?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
   
