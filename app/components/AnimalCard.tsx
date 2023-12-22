@@ -33,13 +33,15 @@ const AnimalCard: React.FC<AnimalCardProps> = ({
                 <h2 className="text-white">{title}</h2>
 
                 <Image src={imageSrc} alt="picture of a young animal" width={imageWidth} height={imageHeight} />
-                <p>● <b>{deathsPerYear.toLocaleString()} animals</b> are killed per year worldwide.</p>
+                <div className="bg-gray-700 p-4 w-5/6 mx-auto">
+                    <p>● <b>{deathsPerYear.toLocaleString()} animals</b> are killed per year worldwide.</p>
 
-                <p>● That means roughly <b>{Math.floor(deathsPerSecond)} deaths per second.</b></p>
+                    <p>● That means roughly <b>{Math.floor(deathsPerSecond)} deaths per second.</b></p>
 
-                <p>● <b>{Math.floor(totalDeaths).toLocaleString()} animals have been killed</b> since you opened this page.</p>
+                    <p>● <b>{Math.floor(totalDeaths).toLocaleString()} animals have been killed</b> since you opened this page.</p>
 
-                <p>● <b className="text-red-500">{deathsThisYear.toLocaleString()} animals have been killed</b> this year so far.</p>
+                    <p>● <b className="text-red-500">{deathsThisYear.toLocaleString()} animals have been killed</b> this year so far.</p>
+                </div>
             </div>
         </div>
     );
