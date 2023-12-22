@@ -11,6 +11,7 @@ export default function Home() {
   const pigDeathsPerYear = 1400092105;
   const fishDeathsPerYear = 2300000000000;
   const sheepAndLambDeathsPerYear = 617255637;
+  const horseDeathsPerYear = 4595650;
 
   const secondsPerYear = 60 * 60 * 24 * 365;
 
@@ -34,6 +35,9 @@ export default function Home() {
   const [killedSheep, setKilledSheep] = useState(0);
   const [killedSheepThisYear, setKilledSheepThisYear] = useState(0);
 
+  const [killedHorse, setKilledHorse] = useState(0);
+  const [killedHorseThisYear, setKilledHorseThisYear] = useState(0);
+
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();
@@ -54,6 +58,9 @@ export default function Home() {
 
       setKilledSheepThisYear(Math.floor(calculateDeathsPerSecond(sheepAndLambDeathsPerYear) * secondsSoFar));
       setKilledSheep((prevKilled) => prevKilled + calculateDeathsPerSecond(sheepAndLambDeathsPerYear));
+
+      setKilledHorseThisYear(Math.floor(calculateDeathsPerSecond(horseDeathsPerYear) * secondsSoFar));
+      setKilledHorse((prevKilled) => prevKilled + calculateDeathsPerSecond(horseDeathsPerYear));
     }, 1000);
 
     return () => clearInterval(interval);
@@ -74,6 +81,8 @@ export default function Home() {
         <AnimalCard title={'Wild Fish'} imageSrc={'/fish.jpg'} imageWidth={500} imageHeight={300} deathsPerYear={fishDeathsPerYear} deathsThisYear={killedFishThisYear} deathsPerSecond={calculateDeathsPerSecond(fishDeathsPerYear)} totalDeaths={killedFish} />
 
         <AnimalCard title={'Sheep and Lamb'} imageSrc={'/sheep.jpg'} imageWidth={500} imageHeight={300} deathsPerYear={sheepAndLambDeathsPerYear} deathsThisYear={killedSheepThisYear} deathsPerSecond={calculateDeathsPerSecond(sheepAndLambDeathsPerYear)} totalDeaths={killedSheep} />
+
+        <AnimalCard title={'Horses'} imageSrc={'/horse.jpg'} imageWidth={500} imageHeight={300} deathsPerYear={horseDeathsPerYear} deathsThisYear={killedHorseThisYear} deathsPerSecond={calculateDeathsPerSecond(horseDeathsPerYear)} totalDeaths={killedHorse} />
 
         <p className='sm:w-3/3 p-2 w-full text-center'>All data is coming from: <Link href={"https://viva.org.uk/animals/number-animals-killed/"}>https://viva.org.uk/animals/number-animals-killed/</Link></p>
       </div>
