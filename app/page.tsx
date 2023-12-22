@@ -2,6 +2,8 @@
 import Image from 'next/image'
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import AnimalCardComponent from './components/AnimalCard';
+import AnimalCard from './components/AnimalCard';
 
 export default function Home() {
   const cattleDeathsPerYear = 331952042;
@@ -55,81 +57,16 @@ export default function Home() {
       <h1>Animal Deaths</h1>
 
       <div className="flex flex-wrap ">
-        <div className="sm:w-1/3 p-2 w-full">
-          <div className="bg-gray-800 shadow-md rounded-md p-4">
-            <h2 className="text-white">Pigs</h2>
 
-            <Image src="/pig.jpg" alt="Description of the image" width={500} height={300} />
+        <AnimalCard title={'Pigs'} imageSrc={'/pig.jpg'} imageWidth={500} imageHeight={300} deathsPerYear={pigDeathsPerYear} deathsThisYear={killedPigsThisYear} totalDeaths={killedPigs} />
 
-            <p>● <b>{pigDeathsPerYear.toLocaleString()} pigs</b> are killed per year worldwide.</p> 
-            
-            <p>● That means roughly <b>{Math.floor(calculateDeathsPerSecond(pigDeathsPerYear))} deaths per second.</b></p>
+        <AnimalCard title={'Cattle'} imageSrc={'/cattle.jpg'} imageWidth={500} imageHeight={300} deathsPerYear={cattleDeathsPerYear} deathsThisYear={killedCattleThisYear} totalDeaths={killedCattle} />
 
-            <p>● <b>{Math.floor(killedPigs).toLocaleString()} pigs have been killed</b> since you opened this page.</p>
+        <AnimalCard title={'Chickens'} imageSrc={'/chicken.jpg'} imageWidth={300} imageHeight={300} deathsPerYear={chickenDeathsPerYear} deathsThisYear={killedChickensThisYear} totalDeaths={killedChickens} />
 
-            <p>● <b className="text-red-500">{killedPigsThisYear.toLocaleString()} pigs have been killed</b> this year so far.</p>
+        <AnimalCard title={'Wild Fish'} imageSrc={'/fish.jpg'} imageWidth={500} imageHeight={300} deathsPerYear={fishDeathsPerYear} deathsThisYear={killedFishThisYear} totalDeaths={killedFish} />
 
-            Photo by <a href="https://unsplash.com/de/@bhris1017?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Christopher Carson</a> on <a href="https://unsplash.com/de/fotos/weisses-ferkel-kaut-heu-i4XLJmlYit4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-
-          </div>
-        </div>
-
-        <div className="sm:w-1/3 p-2 w-full">
-          <div className="bg-gray-800 shadow-md rounded-md p-4">
-            <h2 className="text-white">Cattle</h2>
-
-            <Image src="/cattle.jpg" alt="Description of the image" width={500} height={300} />
-            <p>● <b>{cattleDeathsPerYear.toLocaleString()} cattle</b> is killed per year worldwide.</p>
-            
-            <p>● That means roughly <b>{Math.floor(calculateDeathsPerSecond(cattleDeathsPerYear))} deaths per second.</b></p>
-
-            <p>● <b>{Math.floor(killedCattle).toLocaleString()} cattle has been killed</b> since you opened this page.</p>
-
-            <p>● <b className="text-red-500">{killedCattleThisYear.toLocaleString()} cattle has been killed</b> this year so far.</p>
-
-            Photo by <a href="https://unsplash.com/de/@dave_george?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">David George</a> on <a href="https://unsplash.com/de/fotos/braune-kuh-auf-grunem-grasfeld-tagsuber-o41CI8825qU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-
-          </div>
-        </div>
-
-        <div className="sm:w-1/3 p-2 w-full">
-          <div className="bg-gray-800 shadow-md rounded-md p-4">
-            <h2 className="text-white">Chickens</h2>
-
-            <Image src="/chicken.jpg" alt="Description of the image" width={300} height={300} />
-            <p>● <b>{chickenDeathsPerYear.toLocaleString()} chickens</b> are killed per year worldwide.</p> 
-            
-            <p>● That means roughly <b>{Math.floor(calculateDeathsPerSecond(chickenDeathsPerYear))} deaths per second.</b></p>
-
-            <p>● <b>{Math.floor(killedChickens).toLocaleString()} chickens have been killed </b> since you opened this page.</p>
-
-            <p>● <b className="text-red-500">{killedChickensThisYear.toLocaleString()} chickens have been killed</b> this year so far.</p>
-
-            Photo by <a href="https://unsplash.com/de/@cobybriant?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Brian David</a> on <a href="https://unsplash.com/de/fotos/weisse-ente-mit-entenkuken-auf-braunem-nest-gi4p27XKVY8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-
-          </div>
-        </div>
-
-        <div className="sm:w-1/3 p-2 w-full">
-          <div className="bg-gray-800 shadow-md rounded-md p-4">
-            <h2 className="text-white">Wild Fish</h2>
-
-            <Image src="/fish.jpg" alt="Description of the image" width={500} height={300} />
-            <p>● <b>790 billion - 2.3 trillion wild fish</b> is killed per year worldwide.</p> 
-            
-            <p>● That means roughly <b>{Math.floor(calculateDeathsPerSecond(fishDeathsPerYear))} deaths per second.</b></p>
-
-            <p>● <b>{Math.floor(killedFish).toLocaleString()} wild fish has been killed </b> since you opened this page.</p>
-
-            <p>● <b className="text-red-500">{killedFishThisYear.toLocaleString()} wild fish has been killed</b> this year so far.</p>
-
-            Photo by <a href="https://unsplash.com/de/@ragojogen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Julieann Ragojo</a> on <a href="https://unsplash.com/de/fotos/flacher-fokus-von-orangefarbenen-fischen-I0u6-10ga0I?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-  
-          </div>
-        </div>
-
-        <p className='sm:w-3/3 p-2 w-full'>All data is coming from: <Link href={"https://viva.org.uk/animals/number-animals-killed/"}>https://viva.org.uk/animals/number-animals-killed/</Link></p>
-    
+        <p className='sm:w-3/3 p-2 w-full text-center'>All data is coming from: <Link href={"https://viva.org.uk/animals/number-animals-killed/"}>https://viva.org.uk/animals/number-animals-killed/</Link></p>
       </div>
 
     </main>
