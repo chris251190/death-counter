@@ -57,7 +57,7 @@ export default function Home() {
 
           <p><b>{Math.floor(killedPigs)} pigs have been killed</b> since you opened this page.</p>
 
-          <p><b>{killedPigsThisYear.toLocaleString()} pigs have been killed</b> this year so far.</p>
+          <p><b style={{ color: 'red' }}>{killedPigsThisYear.toLocaleString()} pigs have been killed</b> this year so far.</p>
         </div>
 
         <div className="sm:w-1/3 p-2 w-full">
@@ -69,7 +69,7 @@ export default function Home() {
 
           <p><b>{Math.floor(killedCattle)} cattle has been killed</b> since you opened this page.</p>
 
-          <p><b>{killedCattleThisYear.toLocaleString()} cattle has been killed</b> this year so far.</p>
+          <p><b style={{ color: 'red' }}>{killedCattleThisYear.toLocaleString()} cattle has been killed</b> this year so far.</p>
         </div>
 
         <div className="sm:w-1/3 p-2 w-full">
@@ -81,7 +81,7 @@ export default function Home() {
 
           <p><b>{Math.floor(killedChickens)} chickens have been killed </b> since you opened this page.</p>
 
-          <p><b>{killedChickensThisYear.toLocaleString()} chickens have been killed</b> this year so far.</p>
+            <p><b style={{ color: 'red' }}>{killedChickensThisYear.toLocaleString()} chickens have been killed</b> this year so far.</p>
         </div>
       </div>
 
