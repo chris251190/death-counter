@@ -65,15 +65,15 @@ export default function Home() {
 
       <div className="flex flex-wrap ">
 
-        <AnimalCard title={'Pigs'} imageSrc={'/pig.jpg'} imageWidth={500} imageHeight={300} deathsPerYear={pigDeathsPerYear} deathsThisYear={killedPigsThisYear} totalDeaths={killedPigs} />
+        <AnimalCard title={'Pigs'} imageSrc={'/pig.jpg'} imageWidth={500} imageHeight={300} deathsPerYear={pigDeathsPerYear} deathsThisYear={killedPigsThisYear} deathsPerSecond={calculateDeathsPerSecond(pigDeathsPerYear)} totalDeaths={killedPigs} />
 
-        <AnimalCard title={'Cattle'} imageSrc={'/cattle.jpg'} imageWidth={500} imageHeight={300} deathsPerYear={cattleDeathsPerYear} deathsThisYear={killedCattleThisYear} totalDeaths={killedCattle} />
+        <AnimalCard title={'Cattle'} imageSrc={'/cattle.jpg'} imageWidth={500} imageHeight={300} deathsPerYear={cattleDeathsPerYear} deathsThisYear={killedCattleThisYear} deathsPerSecond={calculateDeathsPerSecond(cattleDeathsPerYear)} totalDeaths={killedCattle} />
 
-        <AnimalCard title={'Chickens'} imageSrc={'/chicken.jpg'} imageWidth={300} imageHeight={300} deathsPerYear={chickenDeathsPerYear} deathsThisYear={killedChickensThisYear} totalDeaths={killedChickens} />
+        <AnimalCard title={'Chickens'} imageSrc={'/chicken.jpg'} imageWidth={300} imageHeight={300} deathsPerYear={chickenDeathsPerYear} deathsThisYear={killedChickensThisYear} deathsPerSecond={calculateDeathsPerSecond(chickenDeathsPerYear)} totalDeaths={killedChickens} />
 
-        <AnimalCard title={'Wild Fish'} imageSrc={'/fish.jpg'} imageWidth={500} imageHeight={300} deathsPerYear={fishDeathsPerYear} deathsThisYear={killedFishThisYear} totalDeaths={killedFish} />
+        <AnimalCard title={'Wild Fish'} imageSrc={'/fish.jpg'} imageWidth={500} imageHeight={300} deathsPerYear={fishDeathsPerYear} deathsThisYear={killedFishThisYear} deathsPerSecond={calculateDeathsPerSecond(fishDeathsPerYear)} totalDeaths={killedFish} />
 
-        <AnimalCard title={'Sheep and Lamb'} imageSrc={'/sheep.jpg'} imageWidth={500} imageHeight={300} deathsPerYear={sheepAndLambDeathsPerYear} deathsThisYear={killedSheepThisYear} totalDeaths={killedSheep} />
+        <AnimalCard title={'Sheep and Lamb'} imageSrc={'/sheep.jpg'} imageWidth={500} imageHeight={300} deathsPerYear={sheepAndLambDeathsPerYear} deathsThisYear={killedSheepThisYear} deathsPerSecond={calculateDeathsPerSecond(sheepAndLambDeathsPerYear)} totalDeaths={killedSheep} />
 
         <p className='sm:w-3/3 p-2 w-full text-center'>All data is coming from: <Link href={"https://viva.org.uk/animals/number-animals-killed/"}>https://viva.org.uk/animals/number-animals-killed/</Link></p>
       </div>

@@ -6,6 +6,7 @@ type AnimalCardProps = {
     imageWidth: number,
     imageHeight: number,
     deathsPerYear: number;
+    deathsPerSecond: number,
     deathsThisYear: number;
     totalDeaths: number;
 };
@@ -22,6 +23,7 @@ const AnimalCard: React.FC<AnimalCardProps> = ({
     imageWidth,
     imageHeight,
     deathsPerYear,
+    deathsPerSecond,
     deathsThisYear,
     totalDeaths,
 }) => {
@@ -33,7 +35,7 @@ const AnimalCard: React.FC<AnimalCardProps> = ({
                 <Image src={imageSrc} alt="picture of a young animal" width={imageWidth} height={imageHeight} />
                 <p>● <b>{deathsPerYear.toLocaleString()} animals</b> are killed per year worldwide.</p>
 
-                <p>● That means roughly <b>{Math.floor(calculateDeathsPerSecond(deathsPerYear))} deaths per second.</b></p>
+                <p>● That means roughly <b>{Math.floor(deathsPerSecond)} deaths per second.</b></p>
 
                 <p>● <b>{Math.floor(totalDeaths).toLocaleString()} animals have been killed</b> since you opened this page.</p>
 
