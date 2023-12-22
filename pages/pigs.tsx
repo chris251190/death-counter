@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'
 
 const Pigs: React.FC = () => {
   const pigsPerYear = 1400092105;
@@ -11,7 +12,9 @@ const Pigs: React.FC = () => {
   return (
     <div>
       <h1>Pigs</h1>
-      <p>{pigsPerYear} Pigs are killed per year worldwide. That means {calculatePigsPerSecond().toFixed(2)} pig deaths per second.</p>
+      <Image src="/pig.jpg" alt="Description of the image" width={500} height={300} />
+
+      <p>{pigsPerYear.toLocaleString()} Pigs are killed per year worldwide. That means {calculatePigsPerSecond().toFixed(2)} pig deaths per second.</p>
     </div>
   );
 };
