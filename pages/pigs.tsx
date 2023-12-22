@@ -26,6 +26,8 @@ const Pigs: React.FC = () => {
       <p>{pigsPerYear.toLocaleString()} Pigs are killed per year worldwide. That means roughly {Math.floor(calculatePigsPerSecond())} pig deaths per second.</p>
 
       <p style={{ fontWeight: 'bold' }}>{Math.floor(killedPigs)} pigs have been killed since you opened this page.</p>
+
+      <p>The data used here are from: <a href="https://viva.org.uk/animals/number-animals-killed/">https://viva.org.uk/animals/number-animals-killed/</a></p>
     </div>
   );
 };
